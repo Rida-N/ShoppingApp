@@ -1,0 +1,11 @@
+<app-header (menuStatus)="onMenuStatusChange($event)"></app-header>
+
+<div class="content">
+  <div class="function-page" *ngIf="showPage==='shoppingList'">
+    <app-shopping-list></app-shopping-list>
+  </div>
+  <div class="function-page" *ngIf="showPage==='recipes'">
+    <app-recipes></app-recipes>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,15 @@
+ul {
+  list-style: none;
+
+  li {
+    display: inline-block;
+    padding: 6px;
+    margin-right: 8px;
+    border-radius: 2px;
+    background-color: #e2ddce;
+
+    &.active {
+      background-color: #dcba61;
+    }
+  }
+}

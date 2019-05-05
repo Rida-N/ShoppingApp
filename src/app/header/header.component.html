@@ -1,3 +1,6 @@
-<p>
-  header works!
-</p>
+<div class="header-content">
+  <ul class="menu">
+    <li class="menu-item" [ngClass]="{'active': currentMenu ===SL}" (click)="OnStatusChanged(SL)">ShoppingList</li>
+    <li class="menu-item" [ngClass]="{'active': currentMenu ===RC}" (click)="OnStatusChanged(RC)">Recipe</li>
+  </ul>
+</div>

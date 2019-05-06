@@ -11,5 +11,10 @@ ul {
     &.active {
       background-color: #dcba61;
     }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
   }
 }

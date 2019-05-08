@@ -1,4 +1,4 @@
 <div class="function-area"><button class="common-button">New Recipe</button></div>
 <div class="recipes-list">
-  <app-recipe-item *ngFor="let item of recipeList" [item]="item"></app-recipe-item>
+  <app-recipe-item *ngFor="let item of recipeList" [item]="item" (clickedItem)="onRecipeSelected(item)"></app-recipe-item>
 </div>

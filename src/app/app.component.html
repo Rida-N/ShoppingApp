@@ -1,7 +1,9 @@
-<app-header (menuStatus)="onMenuStatusChange($event)"></app-header>
+<div class="container">
+  <app-header (menuStatus)="onMenuStatusChange($event)"></app-header>
 
-<div class="content">
-  <app-shopping-list *ngIf="showPage==='shoppingList'"></app-shopping-list>
-  <app-recipes *ngIf="showPage==='recipes'"></app-recipes>
+  <div class="content">
+    <app-shopping-list *ngIf="showPage==='shoppingList'"></app-shopping-list>
+    <app-recipes *ngIf="showPage==='recipes'"></app-recipes>
+  </div>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>

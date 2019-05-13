@@ -1,3 +1,13 @@
-<p>
-  shopping-list works!
-</p>
+<div class="shoppingList-content">
+  <app-shopping-edit (ingredientAdded)="onIngredientAdded($event)">
+  </app-shopping-edit>
+  <ul *ngIf="ingredientList;else infoText">
+    <li *ngFor="let ingredient of ingredientList">
+      <a href="">{{ingredient.name}} ({{ingredient.amount}})</a>
+    </li>
+  </ul>
+  <ng-template #infoText>
+    <p>Please add a Ingredient</p>
+  </ng-template>
+
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Recipe } from './recipe.model';
 
 @Component({
   selector: 'app-recipes',
@@ -7,19 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipesComponent implements OnInit {
 
-  recipeList;
+  selectedRecipe: Recipe;
   constructor() { }
 
-  ngOnInit() {
-    this.getRecipeList();
-  }
-
-  getRecipeList() {
-    this.recipeList = [
-      { name: 'recipe1', description: 'recipe1 decription', imgPath: '../assets/imgs/recipe1.png' },
-      { name: 'recipe2', description: 'recipe2 decription', imgPath: '../assets/imgs/recipe2.png' },
-      { name: 'recipe3', description: 'recipe3 decription', imgPath: '../assets/imgs/recipe3.png' }
-    ];
+   ngOnInit() {
   }
 
 }

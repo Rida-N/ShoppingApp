@@ -2,11 +2,17 @@
 <div class="row">
   <h2>{{recipe.name}}</h2>
 </div>
+
+<div>
+  <ul>
+    <li *ngFor="let item of recipe.ingredients">{{item.name}}: {{item.amount}}</li>
+  </ul>
+</div>
 <div class="row">
   <div class="btn-group">
     <button>Manage Recipe</button>
-    <ul>
-      <li><a href="">To Shopping List</a></li>
+    <ul class="recipe-ingredients-list">
+      <li><a (click)=addToShoppingList()>To Shopping List</a></li>
       <li><a href="">Edit Recipe</a></li>
       <li><a href="">Delete Recipe</a></li>
     </ul>

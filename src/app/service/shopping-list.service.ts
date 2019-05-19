@@ -20,4 +20,7 @@ export class ShoppingListService {
   addIngredient(name: string, amount: number) {
     this.ingredientList.push(new Ingredient(name, amount));
   }
+  addIngredients(ingredients: Ingredient[]) {
+    this.ingredientList.push(...ingredients);
+  }
 }

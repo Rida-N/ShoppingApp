@@ -6,6 +6,18 @@ import { Ingredient } from '../ingredient.model';
 })
 export class ShoppingListService {
 
-  ingredientList: Ingredient[] = [];
+  ingredientList: Ingredient[] = [
+    new Ingredient('Apples', 5),
+    new Ingredient('Tomatoes', 10)
+  ];
+
   constructor() { }
+
+  getIngredients() {
+    return this.ingredientList;
+  }
+
+  addIngredient(name: string, amount: number) {
+    this.ingredientList.push(new Ingredient(name, amount));
+  }
 }

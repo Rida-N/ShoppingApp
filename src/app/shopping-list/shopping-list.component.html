@@ -1,8 +1,8 @@
 <div class="shoppingList-content">
-  <app-shopping-edit (ingredientAdded)="onIngredientAdded($event)">
+  <app-shopping-edit>
   </app-shopping-edit>
-  <ul *ngIf="ingredientList;else infoText">
-    <li *ngFor="let ingredient of ingredientList">
+  <ul *ngIf="shoppingListService.ingredientList;else infoText">
+    <li *ngFor="let ingredient of shoppingListService.ingredientList">
       <a href="">{{ingredient.name}} ({{ingredient.amount}})</a>
     </li>
   </ul>
